@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-card',
@@ -12,10 +12,12 @@ export class LoginCardComponent implements OnInit {
   returnUrl: string;
   loading = false;
   submitted = false;
+  loginGroup: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private _router: Router
   ) { }
 
   ngOnInit() {
@@ -42,6 +44,9 @@ export class LoginCardComponent implements OnInit {
     }
 
     this.loading = true;
+    // console.log(this.loginGroup.value, this.loginGroup.valid);
+    this._router.navigate([`/home/myTeseo`]);
+
     // this.authenticationService.login(this.f.username.value, this.f.password.value)
     //     .pipe(first())
     //     .subscribe(

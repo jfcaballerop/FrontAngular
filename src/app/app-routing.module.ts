@@ -13,7 +13,7 @@ const routes: Routes = [
       redirectTo: 'home/login'
   }
 ];
-
+// TODO: Cambiar redireccion para que acepte otras rutas
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
 import { SharedModule } from './shared/shared.module';
 // used to create fake backend
@@ -23,7 +24,8 @@ import { fakeBackendProvider } from './_helpers';
     ReactiveFormsModule,
     HttpClientModule,
     LoginModule,
-    SharedModule
+    SharedModule,
+    HomeModule
   ],
   providers: [
     // provider used to create fake backend
